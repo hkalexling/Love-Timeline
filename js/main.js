@@ -5,6 +5,9 @@ jQuery(document).ready(function($){
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
 
+	day_count = dateDiffInDays(new Date("1/29/2016"), new Date());
+	document.getElementById('days').innerHTML = "我们已经在一起 " + day_count + " 天了"
+
 	//on scolling, show/animate timeline blocks when enter the viewport
 	$(window).on('scroll', function(){
 		(!window.requestAnimationFrame) 
@@ -22,5 +25,13 @@ jQuery(document).ready(function($){
 		blocks.each(function(){
 			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
 		});
+	}
+
+	function dateDiffInDays(a, b) {
+  		// Discard the time and time-zone information.
+  		var utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+  		var utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+  		return Math.floor((utc2 - utc1) / (1000 * 60 * 60 * 24));
 	}
 });
