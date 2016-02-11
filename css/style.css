@@ -68,14 +68,14 @@ header{
   background: #00BFA5;
 }
 footer{
-  height: 280px;
+  height: 320px;
   line-height: 40px;
   background: #00BFA5;
 }
 header h1{
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
 }
 footer h1{
   text-align: center;
@@ -91,18 +91,26 @@ footer h2{
   text-align: center;
   color: #CFD8DC;
 }
-/*
-@media only screen and (min-width: 1170px) {
-  header {
-    height: 300px;
-    line-height: 300px;
+footer h3{
+  text-align: center;
+  font-family: "Sans-serif";
+  margin-right: 15px;
+  color: #CFD8DC;
+}
+footer a{
+  font-family: "Sans-serif";
+  margin-right: 15px;
+  color: #CFD8DC;
+}
+@media only screen and (max-width: 650px) {
+  header h2 {
+    font-size: 14px;
   }
-  header h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
+  footer h2, h3, a{
+    font-size: 12px;
   }
 }
-*/
+
 #cd-timeline {
   position: relative;
   padding: 2em 0;
