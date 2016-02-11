@@ -18,7 +18,7 @@ body {
   font-size: 100%;
   font-family: "Droid Serif", serif;
   color: #7f8c97;
-  background-color: #e9f0f5;
+  background-color: #00BFA5;
 }
 
 a {
@@ -42,16 +42,19 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 .cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 90%;
-  max-width: 1170px;
   margin: 0 auto;
+  background-color: #e9f0f5;
 }
 .cd-container::after {
   /* clearfix */
   content: '';
   display: table;
   clear: both;
+}
+.inner_container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1170px;
 }
 
 /* -------------------------------- 
@@ -62,12 +65,12 @@ Main components
 header{
   height: 210px;
   line-height: 70px;
-  background: #303e49;
+  background: #00BFA5;
 }
 footer{
   height: 280px;
   line-height: 40px;
-  background: #303e49;
+  background: #00BFA5;
 }
 header h1{
   text-align: center;
@@ -77,15 +80,16 @@ header h1{
 footer h1{
   text-align: center;
   color: white;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
 }
 header h2{
   text-align: right;
   margin-right: 20px;
+  color: #CFD8DC;
 }
 footer h2{
   text-align: center;
+  color: #CFD8DC;
 }
 /*
 @media only screen and (min-width: 1170px) {
@@ -102,8 +106,6 @@ footer h2{
 #cd-timeline {
   position: relative;
   padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
 #cd-timeline::before {
   /* this is the vertical line */
@@ -117,8 +119,8 @@ footer h2{
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
-    margin-top: 3em;
-    margin-bottom: 3em;
+    /*margin-top: 3em;
+    margin-bottom: 3em;*/
   }
   #cd-timeline::before {
     left: 50%;
@@ -265,7 +267,7 @@ footer h2{
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #d7e4ed;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .cd-timeline-content:after {
   content: "";
