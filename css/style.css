@@ -44,6 +44,9 @@ Modules - reusable parts of our design
 .cd-container {
   margin: 0 auto;
   background-color: #e9f0f5;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1170px;
 }
 .cd-container::after {
   /* clearfix */
@@ -51,10 +54,9 @@ Modules - reusable parts of our design
   display: table;
   clear: both;
 }
-.inner_container {
-  width: 90%;
+.out-container {
   margin: 0 auto;
-  max-width: 1170px;
+  background-color: #e9f0f5;
 }
 
 /* -------------------------------- 
@@ -182,13 +184,13 @@ footer a{
   margin-left: -12px;
   margin-top: -12px;
 }
-.cd-timeline-img.cd-picture {
+.cd-timeline-img.cd-green {
   background: #75ce66;
 }
-.cd-timeline-img.cd-movie {
+.cd-timeline-img.cd-red {
   background: #c03b44;
 }
-.cd-timeline-img.cd-location {
+.cd-timeline-img.cd-yellow {
   background: #f0ca45;
 }
 @media only screen and (min-width: 1170px) {
