@@ -39,4 +39,43 @@ jQuery(document).ready(function($){
 
   		return Math.floor((utc2 - utc1) / (1000 * 60 * 60 * 24));
 	}
+
+	function generateTimeLine() {
+		$.getJSON('data.json', function(json){
+			$.each(json.data, function(index, data) {
+
+				var remainder = index % 3
+				var circle = ''
+				switch (remainder) {
+					case 0:
+						circle = '<div class="cd-timeline-img cd-green"></div>'
+						break
+					case 1:
+						circle = '<div class="cd-timeline-img cd-red"></div>'
+						break
+					case 2:
+						circle = '<div class="cd-timeline-img cd-yellow"></div>'
+						break
+					default:
+						break
+				}
+				var img = ''
+				if (data.img != null) {
+					img = '<img src="img/' + data.img + '">'
+				}
+
+				var section = $('#cd-timeline')
+				section.append('<div class="cd-timeline-block">' 
+					+ circle 
+					+ '<div class="cd-timeline-content">' 
+					+ '<h2>' + data.title + '</h2>' 
+					+ '<p>' + data.text + '</p>'
+					+ img
+					+ '<span class="cd-date">' + data.date + '</span>'
+					+ '</div>' + '</div>')
+			})	
+		})
+	}
+
+	generateTimeLine()
 });
