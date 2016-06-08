@@ -76,6 +76,6 @@ jQuery(document).ready(function($){
 			})	
 		})
 	}
-
+	
 	generateTimeLine()
 });
