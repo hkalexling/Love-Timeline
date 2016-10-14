@@ -44,6 +44,10 @@ jQuery(document).ready(function($){
 		$.getJSON('data.json', function(json){
 			$.each(json.data, function(index, data) {
 
+				if (!data.title || !data.text || !data.date){
+					return;
+				}
+
 				var remainder = index % 3
 				var circle = ''
 				switch (remainder) {
